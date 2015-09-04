@@ -1,0 +1,31 @@
+[
+  {
+    "model": "AdminGroup",
+    "data": {
+      "name": "root",
+      "permissions" : {
+
+      }
+    }
+  },
+  {
+    "model": "Admin",
+    "data": {
+      "name": "Root Admin",
+      "AdminGroup": {
+      	"name" : "root"
+      },
+      "User": {
+      	"username": "root"
+      }
+    }
+  },
+  {
+    "model": "User",
+    "data": {
+      "username": "root",
+      "isActive": "yes",
+      "email": "mark@grandkru.com"
+    }
+  }
+]

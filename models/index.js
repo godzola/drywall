@@ -27,30 +27,18 @@ Object.keys(db).forEach(function(modelName) {
 });
 
 var options = {
-    force: true
+    force: false    // Changed to false to coincide with migrations over sync()
 }
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-db.User.sync(options).then(function() {
+db.Admin.belongsTo(db.User);
+db.Message.belongsTo(db.User);
+db.Account.belongsTo(db.User);
+db.Admin.belongsTo(db.AdminGroup);
 
-    db.Message.belongsTo(db.User);
-    db.Account.belongsTo(db.User);
-
-    db.Account.sync(options);
-    db.Message.sync(options);
-
-    db.Admin.sync(options);
-    db.AdminGroup.sync(options);
-    db.Category.sync(options);
-    db.LoginAttempt.sync(options);
-    db.Note.sync(options);
-    db.Status.sync(options);
-    db.StatusLog.sync(options);
-
-});
-
+db.sequelize.sync(options);
 
 module.exports = db;
 

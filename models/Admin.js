@@ -2,10 +2,7 @@ module.exports = function(sequelize, DataTypes) {
     return sequelize.define('Admin', {
         name: {
             type: DataTypes.JSON
-        },
-        name: {
-            type: DataTypes.JSON
-        },
+        }
     }, {
         freezeTableName: true,
         instanceMethods: {

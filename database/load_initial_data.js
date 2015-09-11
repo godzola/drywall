@@ -5,9 +5,10 @@ var models = {
 	AdminGroup: db.AdminGroup,
 	User: db.User
 };
-console.log("File loaded");
-sequelizeFixtures.loadFile("fixtures/initial_seed.json", models).then(function() {
+console.log("Before loadFile");
+sequelizeFixtures.loadFile("fixtures/initial_seed.json", models).then(function(result) {
 	// Confirm that the fixtures load correctly
-	console.log("Upload complete");
+	console.log("Upload complete: " + JSON.stringify(result));
 });
+console.log("After loadFile");
 

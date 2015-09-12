@@ -3,9 +3,7 @@
     "model": "AdminGroup",
     "data": {
       "name": "root",
-      "permissions" : {
-
-      }
+      "permissions" : ""
     }
   },
   {

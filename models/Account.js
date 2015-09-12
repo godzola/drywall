@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING
         },
         name: {
-            type: DataTypes.JSON
+            type: DataTypes.STRING
         },
         company: {
             type: DataTypes.STRING

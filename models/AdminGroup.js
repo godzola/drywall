@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING
         },
         permissions: {
-            type: DataTypes.JSON
+            type: DataTypes.STRING
         }
     }, {
         freezeTableName: true

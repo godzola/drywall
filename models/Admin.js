@@ -2,9 +2,6 @@ module.exports = function(sequelize, DataTypes) {
     return sequelize.define('Admin', {
         name: {
             type: DataTypes.STRING
-        },
-        userId: {
-            type: DataTypes.INTEGER
         }
     }, {
         freezeTableName: true,

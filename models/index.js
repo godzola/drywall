@@ -14,9 +14,7 @@ exports.all = [];
 });
 
 (function (model) {
-		console.log("DEBUG: 1");
-    model.User.belongsTo(model.Admin);
-		console.log("DEBUG: 2");
+    model.Admin.belongsTo(model.User);
     model.Message.belongsTo(model.User);
 		console.log("DEBUG: 3");
     model.Account.belongsTo(model.User);
